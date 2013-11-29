@@ -1,11 +1,13 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com)
+# Duży Lotek
 
-HTML5 Boilerplate is a professional front-end template for building fast,
-robust, and adaptable web apps or sites.
+Prosty program napisany z wykorzytsaniem
 
-This project is the product of many years of iterative development and combined
-community knowledge. It does not impose a specific development philosophy or
-framework, so you're free to architect your code in the way that you want.
+* HTML 5
+* CSS 3
+* JavaScript oraz biblioteki JQuery
+* Bootstrap
+* a wszystko opakowane w projekt [HTML5 Boilerplate](http://html5boilerplate.com)
+
 
 * Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
 * Homepage: [http://html5boilerplate.com](http://html5boilerplate.com)
