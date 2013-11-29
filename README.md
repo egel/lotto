@@ -1,6 +1,6 @@
 # Duży Lotek
 
-Prosty program napisany z wykorzytsaniem
+Prosty program napisany z wykorzytsaniem:
 
 * HTML 5
 * CSS 3
@@ -8,23 +8,14 @@ Prosty program napisany z wykorzytsaniem
 * Bootstrap
 * a wszystko opakowane w projekt [HTML5 Boilerplate](http://html5boilerplate.com)
 
-
-* Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* Homepage: [http://html5boilerplate.com](http://html5boilerplate.com)
-* Twitter: [@h5bp](http://twitter.com/h5bp)
-
-
 ## Quick start
 
-Choose one of the following options:
+Wybierz jedną opcję:
 
-1. Download the latest stable release from
-   [html5boilerplate.com](http://html5boilerplate.com/) or a custom build from
-   [Initializr](http://www.initializr.com).
-2. Clone the git repo — `git clone
-   https://github.com/h5bp/html5-boilerplate.git` - and checkout the tagged
-   release you'd like to use.
-
+1. Sklonuj projekt z repozytorium na dysk wpisując w konsolę:          
+   `git clone git@bitbucket.org:egel/lotto.git`
+2. Lub pobierz bezpośrednio spakowaną paczkę z działu downloads -> branches
+   (https://bitbucket.org/egel/lotto/downloads)[https://bitbucket.org/egel/lotto/downloads]
 
 ## Features
 

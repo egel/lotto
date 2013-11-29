@@ -81,15 +81,20 @@ function checkNumbers()
 	var myNode = document.getElementById("currentDate");
 	myNode.innerHTML = '';
 	
+	// wpisuje aktualną datę do pola z id currentDate 
 	$("#currentDate").append(getCurrentDate());
 	
+	// storzenie tablicy z wygenerowanymi losowymi numerami
 	var temp = generateRandomNumbers(6);
-	var order = new Array();
 	
+	// stworznie tymczasowej tablicy z numerami zadanymi przez uzytkownika
+	//var order = new Array();
+	
+	//
 	for(var r=1; r<=6; r++)
 	{
-		order.push(document.getElementById('n'+r).value);
-		$("#orderNumbers").append('<li>'+ order[i-1] + '</li>');
+		// order.push();
+		$("#orderNumbers").append('<li>'+ parseInt(document.getElementById("n"+r).value) + '</li>');
 	}
 	
 	for(var i=0; i<temp.length; i++)

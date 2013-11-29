@@ -33,47 +33,46 @@
 		      <div class="header">
 		        <ul class="nav nav-pills pull-right">
 		          <li class="active"><a href="#">Home</a></li>
-		          <li><a href="#">About</a></li>
-		          <li><a href="#">Contact</a></li>
+		          <!-- <li><a href="#">About</a></li> -->
+		          <!-- <li><a href="#">Contact</a></li> -->
 		        </ul>
 		        <h3 class="text-muted">Lotto</h3>
 		      </div>
 		
 		      <div class="jumbotron">
 		        <h1>Losowanie lotto</h1>
+		        <h2>Duży lotek</h2>		        
 		        <p class="lead">Wpisz 6 liczb (od 1 do 49) w polach i naciśnij "sprawdź"</p>
 		        <!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
 		      </div>
 	
 	      <div class="row marketing">
-	        <div class="col-md-3">
+	        <div class="col-md-6">
         		<div class="input-group">
 						  <span class="input-group-addon">Number 1</span>
-						  <input type="text" class="form-control" placeholder="ex: 12" id="n1" placeholder="np: 4" maxlength="2" type="number">
+						  <input type="text" class="form-control" placeholder="ex: 4" id="n1" maxlength="2" type="number">
 						</div>
         		<div class="input-group">
 						  <span class="input-group-addon">Number 2</span>
-						  <input type="text" class="form-control" placeholder="ex: 12" id="n2" placeholder="np: 4" maxlength="2" type="number">
+						  <input type="text" class="form-control" placeholder="ex: 12" id="n2" maxlength="2" type="number">
 						</div>
-					</div>
-	        <div class="col-md-3">
         		<div class="input-group">
 						  <span class="input-group-addon">Number 3</span>
-						  <input type="text" class="form-control" placeholder="ex: 12" id="n3" placeholder="np: 4" maxlength="2" type="number">
-						</div>
-        		<div class="input-group">
-						  <span class="input-group-addon">Number 4</span>
-						  <input type="text" class="form-control" placeholder="ex: 12" id="n4" placeholder="np: 4" maxlength="2" type="number">
+						  <input type="text" class="form-control" placeholder="ex: 18" id="n3" maxlength="2" type="number">
 						</div>
 					</div>
-	        <div class="col-md-3">
+	        <div class="col-md-6">
+        		<div class="input-group">
+						  <span class="input-group-addon">Number 4</span>
+						  <input type="text" class="form-control" placeholder="ex: 29" id="n4" maxlength="2" type="number">
+						</div>
         		<div class="input-group">
 						  <span class="input-group-addon">Number 5</span>
-						  <input type="text" class="form-control" placeholder="ex: 12" id="n5" placeholder="np: 4" maxlength="2" type="number">
+						  <input type="text" class="form-control" placeholder="ex: 42" id="n5" maxlength="2" type="number">
 						</div>
         		<div class="input-group">
 						  <span class="input-group-addon">Number 6</span>
-						  <input type="text" class="form-control" placeholder="ex: 12" id="n6" placeholder="np: 4" maxlength="2" type="number">
+						  <input type="text" class="form-control" placeholder="ex: 3" id="n6" maxlength="2" type="number">
 						</div>
 					</div>
 				</div>
@@ -85,7 +84,9 @@
        	</div>
 
 	      <div class="row marketing">	    
-	        <div class="col-md-12" id="currentDate"></div>
+	        <div class="col-md-12">
+	        	<h4>Data losowania:</h4>
+	        	<div id="currentDate">Brak wcześniejszego losowania</div></div>
 	      </div>
 	        
 	      <div class="row marketing">	    
