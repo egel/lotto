@@ -3,7 +3,7 @@
 
 # Exist project files #
 #######################
-vendor/
+#vendor/
 
 # Compiled source #
 ###################
