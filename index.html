@@ -1,122 +1,22 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
+		<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
         <title>Losowanie lotto</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-				<!-- Wymagane do działania -->
-				<script>
-					function printCurrentDate()
-					{
-						var today = new Date();
-						document.write(today);
-					}
-					
-					function containsObject(obj, list)
-					{
-						for(var i=0; i<list.length; i++)
-						{
-							if(list[i] === obj) {
-								return true;
-							}
-						}
-						return false;
-					}
-					
-					function getRandomNumberFromArray(bucket)
-					{
-						var randomIndex = Math.floor(Math.random()*bucket.length);
-   					return bucket.splice(randomIndex, 1)[0];
-					}
-					
-					/*
-					 * Generuje liczbę(amount) losowych numerków z zakresu 1 do 49
-					 */
-					function generateRandomNumbers(amount)
-					{
-						var bucket = new Array();
-						for(var i=1; i<=49; i++)
-						{
-							bucket.push(i);
-						}
-						
-						var temp = new Array();
-						for (var k=0; k<amount; k++)
-						{ 
-							temp.push(getRandomNumberFromArray(bucket));
-						}
-						return temp;
-					}
-					
-					/*
-					 * Wypisuje numerki w miejscu wywołania funkcji
-					 */
-					function printRandomNumbers(amount)
-					{
-						temp = generateRandomNumbers(amount);
-						for (var i=0; i<amount; i++)
-						{
-							if (i == amount-1)
-							{
-								document.write(temp[i]);
-							}
-							else
-							{
-								document.write(temp[i] + ", ");
-							}
-						}
-					}
-					
-					function checkNumbers()
-					{
-						// usunięcie elementów z wyników lotto
-						var myNode = document.getElementById("wynikiLotto");
-						myNode.innerHTML = '';
-						var myNode = document.getElementById("orderNumbers");
-						myNode.innerHTML = '';
-						
-						var temp = generateRandomNumbers(6);
-						var order = new Array();
-						
-						for(var r=1; r<=6; r++)
-						{
-							order.push(document.getElementById('n'+r).value);
-							$("#orderNumbers").append('<li>'+ order[i-1] + '</li>');
-						}
-						
-						// usunięcie elementów z wyników lotto
-						var myNode = document.getElementById("wynikiLotto");
-						myNode.innerHTML = '';
-						
-						for(var i=0; i<temp.length; i++)
-						{
-							if
-							(
-								parseInt(document.getElementById('n1').value) === temp[i]
-								|| parseInt(document.getElementById('n2').value) === temp[i]
-								|| parseInt(document.getElementById('n3').value) === temp[i]
-								|| parseInt(document.getElementById('n4').value) === temp[i]
-								|| parseInt(document.getElementById('n5').value) === temp[i]
-								|| parseInt(document.getElementById('n6').value) === temp[i]
-							)
-							{
-								$("#wynikiLotto").append('<li class="green">'+ temp[i] + '</li>');
-							}
-							else
-							{
-								$("#wynikiLotto").append('<li class="red">'+ temp[i] + '</li>');
-							}
-							
-							for(var s=0; s<order.length; s++)
-							{
-								
-							}
-						}
-					}
-				</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta name="description" content="">
+		    <meta name="author" content="">
+	  	  <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+	
+				
+				<!-- Bootstrap -->
+				<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+				<!-- Bootstrap narrow -->
+				<link rel="stylesheet" href="css/jumbotron-narrow.css">
+				
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
@@ -129,39 +29,94 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Losowanie lotto</h1>
-        <p>Wpisz 6 liczb (od 1 do 49) w polach i naciśnij "sprawdź"</p>
-        
-        <form id="formularz" onclick="checkIsValid()">
-        	<ul>
-        		<li><input id="n1" placeholder="np: 4" maxlength="2" type="number" /></li>
-        		<li><input id="n2" placeholder="np: 4" maxlength="2" type="number" /></li>
-        		<li><input id="n3" placeholder="np: 4" maxlength="2" type="number" /></li>
-        		<li><input id="n4" placeholder="np: 4" maxlength="2" type="number" /></li>
-        		<li><input id="n5" placeholder="np: 4" maxlength="2" type="number" /></li>
-        		<li><input id="n6" placeholder="np: 4" maxlength="2" type="number" /></li>
-        	</ul>
-        </form>
-        <button onclick="checkNumbers()">Sprawdź</button>
-        
-        <div id="results">
-        	<script type="text/javascript">
-        		printCurrentDate();
-        	</script>
-        	<h2>Wynik losowania totolotka</h2>
-        	Szczęśliwe numerki to: 
-        	<ul id="wynikiLotto"></ul>
-        	<p>Typowane numery to:</p> 
-        	<ul id="orderNumbers"></ul>
-        	<p>Poprawnie wytypowane numery to:</p> 
-        	<ul id="goodNumbers"></ul>
-        	<p>Niepoprawnie wytypowane numery:</p> 
-        	<ul id="badNumbers"></ul>
-        </div>
+	    	<div class="container">
+		      <div class="header">
+		        <ul class="nav nav-pills pull-right">
+		          <li class="active"><a href="#">Home</a></li>
+		          <li><a href="#">About</a></li>
+		          <li><a href="#">Contact</a></li>
+		        </ul>
+		        <h3 class="text-muted">Lotto</h3>
+		      </div>
+		
+		      <div class="jumbotron">
+		        <h1>Losowanie lotto</h1>
+		        <p class="lead">Wpisz 6 liczb (od 1 do 49) w polach i naciśnij "sprawdź"</p>
+		        <!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
+		      </div>
+	
+	      <div class="row marketing">
+	        <div class="col-md-3">
+        		<div class="input-group">
+						  <span class="input-group-addon">Number 1</span>
+						  <input type="text" class="form-control" placeholder="ex: 12" id="n1" placeholder="np: 4" maxlength="2" type="number">
+						</div>
+        		<div class="input-group">
+						  <span class="input-group-addon">Number 2</span>
+						  <input type="text" class="form-control" placeholder="ex: 12" id="n2" placeholder="np: 4" maxlength="2" type="number">
+						</div>
+					</div>
+	        <div class="col-md-3">
+        		<div class="input-group">
+						  <span class="input-group-addon">Number 3</span>
+						  <input type="text" class="form-control" placeholder="ex: 12" id="n3" placeholder="np: 4" maxlength="2" type="number">
+						</div>
+        		<div class="input-group">
+						  <span class="input-group-addon">Number 4</span>
+						  <input type="text" class="form-control" placeholder="ex: 12" id="n4" placeholder="np: 4" maxlength="2" type="number">
+						</div>
+					</div>
+	        <div class="col-md-3">
+        		<div class="input-group">
+						  <span class="input-group-addon">Number 5</span>
+						  <input type="text" class="form-control" placeholder="ex: 12" id="n5" placeholder="np: 4" maxlength="2" type="number">
+						</div>
+        		<div class="input-group">
+						  <span class="input-group-addon">Number 6</span>
+						  <input type="text" class="form-control" placeholder="ex: 12" id="n6" placeholder="np: 4" maxlength="2" type="number">
+						</div>
+					</div>
+				</div>
 
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+	      <div class="row marketing">
+	        	
+	        <div class="col-md-12">
+	        	<button class="btn btn-lg btn-warning" onclick="checkNumbers()">Sprawdź</button>
+	        </div>	        
+        </div>	        
+
+	      <div class="row marketing">	    
+	        <div class="col-md-12" id="currentDate"></div>
+	        
+	        <div class="col-md-6">
+	          <h4>Wynik losowania totolotka</h4>
+	          <p>Szczęśliwe numerki to:</p>
+	          <ul id="wynikiLotto">
+	          	Brak danych ;)
+	          </ul>
+	        </div>
+	
+	        <div class="col-md-6"> 
+	          <h4>Typowane numery to:</h4>
+	        	<ul id="orderNumbers">
+	        		Brak danych ;)
+	        	</ul>
+	        </div>
+	      </div>
+	
+	      <div class="footer">
+	        <p>&copy; Maciej Sypień 2013</p>
+	      </div>
+	
+		    </div> <!-- /container -->
+		
+		
+		    <!-- Bootstrap core JavaScript
+		    ================================================== -->
+		    <!-- Placed at the end of the document so the pages load faster -->
+		    <script src="vendor/jquery/jquery.min.js"></script>
+		    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+		    <script src="js/plugins.js"></script>
+		    <script src="js/main.js"></script>
+  	</body>
 </html>
