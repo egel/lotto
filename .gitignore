@@ -13,6 +13,7 @@ vendor
 *.exe
 *.o
 *.so
+README.html
 
 # Packages #
 ############
